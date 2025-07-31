@@ -1,0 +1,26 @@
+ALGORITHM char_counter_in_sentence
+VAR
+    i, j: INTEGER:=0;
+    k: INTEGER:=1;
+    sentence: STRING;
+    char_table : ARRAY_OF char[5]:= ["a","i","o","e","u"];
+    c: CHAR;
+BEGIN
+    Read(sentence)
+    c := sentence[i];
+    WHILE (char <> ".") DO
+        FOR h FROM 1 TO length(char_table) STEP step  DO
+            IF (c = char_table[h]) THEN
+                j := j+1;
+            END_IF
+        END_FOR
+        IF (c = " ") THEN
+            k := k+1;
+        END_IF
+        i := i+1;
+        c := sentence[i];
+    END_WHILE
+    Write("The number of characters in the sentence is: ", i)
+    Write("The number of vowels in the sentence is: ", j)
+    Write("The number of words in the sentence is: ", k)
+END
