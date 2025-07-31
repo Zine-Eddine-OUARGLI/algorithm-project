@@ -2,14 +2,15 @@ ALGORITHM char_counter_in_sentence
 VAR
     i, j: INTEGER:=0;
     k: INTEGER:=1;
+    h: INTEGER;
     sentence: STRING;
-    char_table : ARRAY_OF char[5]:= ["a","i","o","e","u"];
+    char_table : ARRAY_OF CHAR[5]:= ["a","i","o","e","u"];
     c: CHAR;
 BEGIN
     Read(sentence)
     c := sentence[i];
-    WHILE (char <> ".") DO
-        FOR h FROM 1 TO length(char_table) STEP step  DO
+    WHILE (c <> ".") DO
+        FOR h FROM 0 TO length(char_table)-1 STEP step  DO
             IF (c = char_table[h]) THEN
                 j := j+1;
             END_IF
