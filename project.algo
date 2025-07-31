@@ -10,7 +10,7 @@ BEGIN
     Read(sentence)
     c := sentence[i];
     WHILE (c <> ".") DO
-        FOR h FROM 0 TO char_table.length-1 STEP step  DO
+        FOR h FROM 0 TO char_table.length-1 STEP 1  DO
             IF (c = char_table[h]) THEN
                 j := j+1;
             END_IF
