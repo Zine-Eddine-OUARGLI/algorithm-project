@@ -4,7 +4,7 @@ VAR
     k: INTEGER:=1;
     h: INTEGER;
     sentence: STRING;
-    char_table : ARRAY_OF CHAR[4]:= {"a","i","o","e","u"};
+    char_table : ARRAY_OF CHAR[5]:= {"a","i","o","e","u"};
     c: CHAR;
 BEGIN
     Read(sentence)
